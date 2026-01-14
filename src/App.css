@@ -1,0 +1,370 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url("./images/bg1.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+body::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000063;
+  z-index: -1;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+:root{
+  --maincolor:#3e97a0;
+  --secondcolor:#ecb81b;
+}
+.outer{
+  padding: 40px;
+  width: calc(100% - 60px);
+}
+.topnav{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.btn,.btndone{
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn{
+  background: var(--maincolor);
+  box-shadow: 2px 2px 5px -1px black;
+  color: white;
+}
+.btndone{
+  background: white;
+  color: var(--maincolor);
+  box-shadow: inset 0 0 7px -3px black;
+}
+.box {
+  width: calc(100% - 70px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 10px;
+  padding: 0 0 20px 0px;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 9px -2px black;
+  flex-wrap: wrap;
+}
+/* ////////////////////////////////////////Header///////////////////////////////////////////// */
+.header{
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50px;
+  background: #3e97a0e8;
+  backdrop-filter: blur(7px);
+  width: 40px;
+  height: 40vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header a{
+  margin: 7% 0;
+}
+.header .depart1,.header .depart2{
+  margin: 7% 0;
+  color: #3e97a0;
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.header .depart1{
+  box-shadow: 0 0 6px 0px black;
+}
+.header .depart2{
+  box-shadow: inset 0 0 7px -2px black;
+}
+.header .button{
+  cursor: pointer;
+  background: #afd4d8;
+  color: #04565e;
+  border: solid 2px #04565e;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 100%;
+  transition: .2s;
+  position: relative;
+}
+.header .button:hover{
+  background-color: #04565e;
+  color: white;
+}
+.header .button .counter{
+  position: absolute;
+  bottom: -10px;
+  right: -8px;
+  padding: 3px;
+  background-color: red;
+  border-radius: 50%;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+.shopping{
+  position: fixed;
+  width: calc(100% - 70px);
+  top: 3px;
+  background: #3e97a0e8;
+  height: 99vh;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  left: 10px;
+  border-radius: 7px;
+  padding: 10px;
+  z-index: 5;
+}
+.shopping .content {
+  overflow-x: hidden;
+  height: calc(100vh - 50px);
+}
+.shopping .countbox{
+  width: 99%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  box-shadow: inset 0 0 5px 0px black;
+  padding: 4px 10px;
+  overflow-y: scroll;
+  margin-top: 9px;
+  max-height: 80%;
+}
+.shopping .top{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  height: 40px;
+  border-bottom: solid 1px;
+}
+.shopping .close{
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 24px;
+}
+.shopping .empty {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  border-radius: 7px;
+  box-shadow: inset 0 0 7px -1px black;
+}
+.shopping .boxitem{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.shopping .boxitem img{
+  width: 30%;
+  height: 20vh;
+} 
+.shopping .outinformation{
+  width: 25%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.shopping .infotmation{
+  width: 25%;
+}
+.shopping .infotmation h3{
+  padding-bottom: 10px;
+  color: white;
+  margin: 0;
+} 
+.shopping .infotmation span{
+  color: #02272a;
+}
+.shopping select{
+  border: none;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: var(--maincolor);
+  margin-top: 15px;
+}
+.shopping select:focus{
+  outline: none;
+}
+.shopping .closeitem{
+  margin-right: 20px;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 25px;
+  width: 20%;
+  cursor: pointer;
+  text-align: end;
+}
+.shopping .buttonsbox{
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.shopping .check{
+  width: 90%;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 6px;
+  background: var(--maincolor);
+  box-shadow: 1px 1px 5px 0px black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  height: 44%;
+  margin: 1px;
+}
+.shopping .check:active, .shopping .check:hover{
+  box-shadow: inset 1px 1px 5px 0px black;
+}
+/* //////////////////////////////////////////////////////////////////////// */
+.order{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  border-radius: 7px;
+  background: #0000008c;
+  color: white;
+  box-shadow: 2px 2px 3px 0px #000000bd;
+  backdrop-filter: blur(8px);
+  transition: 2s;
+}
+.order .right{
+  position: absolute;
+  right: 4px;
+  top: 3px;
+  cursor: pointer;
+}
+.order p{
+  text-align: center;
+  margin: 15px 5px 10px 0;
+}
+.order button{
+  background-color: var(--maincolor);
+}
+.order div{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 3px;
+}
+/* ///////////////////////////////////item//////////////////////////////////// */
+.item{
+  overflow: hidden;
+  width: 23%;
+  height: 300px;
+  border-radius: 7px;
+  box-shadow: 3px 3px 6px -1px black;
+  position: relative;
+  perspective: 700px;
+  margin-top: 20px;
+  backdrop-filter: blur(20px);
+}
+.item .parent{
+  transform-style: preserve-3d;
+  transition: .5s;
+  width: 100%;
+  height: 100%;
+  transform: rotatey(0);
+}
+.item:hover>.parent{
+  transform: rotatey(180deg);
+}
+.item .front{
+  width: 100%;
+  height: 100%;
+}
+.item .front p,.item .front h4{
+  padding: 6px 0px 0 10px;
+  color: white;
+}
+.item img{
+  width: 100%;
+  height: 80%
+}
+.item .back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background: #3e97a087;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.item h3{
+  padding: 0 0 10px 0;
+  color: white;
+}
+.item .btn1{
+  border: none;
+  margin-top: 10px;
+  background: var(--maincolor);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 0px black;
+  cursor: pointer;
+}
+.item .btn1:focus{
+  background-color: white;
+  color: var(--maincolor);
+}
+/* ///////////////////////////////////////////////////////////////////////////// */
+@media (max-width:768px) {
+  .item{
+      overflow: hidden;
+      width: 48%;
+  }
+}
+@media (max-width:567px) {
+  .item{
+      overflow: hidden;
+      width: 90%;
+  }
+  .outer {
+      padding: 30px 0px;
+  }
+  .shopping .outinformation {
+      width: 25%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0 20px 0 8px;
+      margin-top: -3px;
+      justify-content: space-between;
+  }
+}
